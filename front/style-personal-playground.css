@@ -1,0 +1,402 @@
+body{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    box-sizing: border-box;
+    min-width: 340px;
+}
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    background-color: #060C1C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+._container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 900px){
+    ._container{
+        padding-right: calc(13px + 7 * ((100vw - 320px) / (900 - 320)));
+        padding-left: calc(13px + 7 * ((100vw - 320px) / (900 - 320)));
+    }    
+}
+
+.instruments::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #232c4d;
+	border-radius: 10px;
+}
+
+.instruments::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #232c4d;
+}
+
+.instruments::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
+
+
+.tradingview-widget-container > div div {
+    width: 100% !important;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+.header{
+    background-color: #232c4d;
+    position: relative;
+    width: 100%;
+}
+.header__container {
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.header__container .title{
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+.header__container .pro {
+    font-style: italic;
+}
+.header__container .right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    margin: auto;
+    gap: 20px;
+    top: 50%;
+    bottom: 50%;
+}
+.header__container .right .button{
+    font-size: 14px;
+    padding: 6px 15px;
+    background-color: #27c965;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header__container .right .notifications{
+    width: 26px;
+    height: 26px;
+    position: relative;
+    cursor: pointer;
+}
+.header__container .right .notifications:hover{
+
+}
+.header__container .right .notifications img{
+    width: 100%;
+}
+.header__container .right .notifications .number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+.header__container .right .notifications .number p{
+
+    display: inline-block;
+}
+.header__container .right .e-mail{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.top_menu {
+    position: absolute;
+    z-index: 10;
+    background: #232c4d;
+    /* width: 100%; */
+    top: 125%;
+    border-radius: 8px;
+    display: none;
+    left: -10px;
+    right: -10px;
+}
+
+.top_item {
+    padding: 10px 10px;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+}
+.top_item:hover {
+    background: #29396b;
+}
+
+.top_menu.active {
+    display: block;
+}
+
+/* .header__container .right .e-mail:hover{
+    background-color: #29396b;
+} */
+.header__container .right .arrow {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: end;
+}
+.header__container .right .arrow img{
+    width: 100%;
+}
+@media (max-width: 1100px) {
+    .header__container .title{
+        margin-left: 20px;
+    }
+}
+@media (max-width: 700px) {
+    .header__container .title{
+        margin: 0 auto;
+    }
+    .header__container .right{
+        position: static;
+    }
+    .header__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .header__container .right .notifications{
+        margin-top: -80px;
+        margin-left: -22px;
+        order: 1;
+
+    }
+}
+/*----------------------------------------------------------------------------------------*/
+.main{
+    flex: 1 1 auto;
+
+    width: 100%;
+    display: flex;
+}
+.main__container{
+    display: flex;
+    display:inline-flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 0 auto;
+    padding: 40px 20px 0 20px;
+
+    width: 100%;
+}
+.main__container .left-panel{
+    display: flex;
+    flex-direction: column;
+    min-width: 314px;
+    width: 314px;
+    gap: 10px;
+    height: 677px;
+}
+.main__container .instruments {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.main__container .left-panel>.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #b6b6b6;
+    margin-bottom: -10px;
+    font-weight: 600;
+}
+.main__container .left-panel>.top>.price{
+    margin-right: -130px;
+}
+.main__container .left-panel .box{
+    background-color: #232c4d;
+    padding: 5px 10px 7px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.main__container .left-panel .box.chosen{
+    background-color: #29396B;
+}
+.main__container .left-panel .box:hover{
+    background-color: #233F90;
+}
+.main__container .left-panel .box .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+}
+.main__container .left-panel .box .top .price{
+    position: absolute;
+    right: 80px;
+}
+.main__container .left-panel .box .top .variable{
+    color: #27c965;
+}
+.main__container .left-panel .box .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #b6b6b6;
+}
+.main__container .left-panel .box .bottom .right{
+    padding: 0 5px;
+    background-color: #060C1C;
+    border:#b6b6b6 1px solid;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+@media (max-width: 1210px) {
+    .main__container .left-panel{
+        display: none;
+    }
+}
+/*-------------------------------------------------------------------------------------------------*/
+.main__container .currency-chart {
+    width: 100%;
+}
+
+.main__container .currency-chart>.top{
+    display: flex;
+    /* gap: 100px; */
+    background-color: #29396b;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__container .currency-chart .top .right{
+    display: flex;  
+    gap: 20px;
+}
+.main__container .currency-chart .top .left .bottom{
+    font-size: 13px;
+    color: #b6b6b6;
+}
+.main__container .currency-chart .top .right .price .bottom{
+    font-size: 13px;
+    color: #b6b6b6;
+}
+.main__container .currency-chart .top .right .variable .top{
+    color: #27c965;
+}
+.main__container .currency-chart .top .right .variable .bottom{
+    font-size: 13px;
+    color: #b6b6b6;
+}
+.main__container .currency-chart .top .right .sell{
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 120px;
+    background-color: #ff352e;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.main__container .currency-chart .top .right .buy{
+    display: flex;
+    height: 40px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: #27c965;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.main__container .currency-chart .image{
+    flex-grow: 1;
+}
+.main__container .currency-chart .image img{
+    object-fit: cover;
+    width: 100%;
+}
+@media (max-width: 750px) {
+    /* .main__container .currency-chart>.top{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    } */
+    .main__container{
+        padding-top: 20px;
+    
+    }
+}
+@media (max-width: 580px) {
+    .main__container .currency-chart .top .right .buy{
+        /* margin-top: -50px;
+        margin-left: -141px; */
+    }
+}
+    /* .main__container .currency-chart>.top{
+        align-items: start;
+    } */
+@media (max-width: 433px){
+    .main__container .currency-chart .top .right{
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+    .main__container .currency-chart .top .right .buy{
+        margin: 0;
+    }
+    .main__container .currency-chart>.top{
+        gap: 10px;
+    }
+}
+
+.sell {
+}
+.icon {
+}
+.text {
+}
+.buy {
+}

@@ -1,0 +1,19 @@
+.notice {
+    position: fixed;
+    right: -300px;
+    top: 40px;
+    width: 300px;
+    border-radius: 8px;
+    padding: 8px;
+    color: #fff;
+    transition: 0.3s;
+    background: #27c965;
+    text-align: center;
+    z-index: 11;
+}
+.notice.error {
+    background: #ff352e;
+}
+.notice.active {
+    right: 100px;
+}

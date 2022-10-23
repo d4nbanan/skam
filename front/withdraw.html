@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <title>Credit Online | Deposit</title>
+    <link rel="stylesheet" href="style-personal-playground.css">
+    <link rel="stylesheet" href="nulling-style.css">
+    <link rel="stylesheet" href="style-deposit.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="shortcut icon" href="images/icon.png">
+</head>
+<body>
+    <div class="notice">Error</div>
+    <div class="header">
+        <div class="header__container _container">
+            <a class="title" href="/trade">
+                <div class="crypto">CRYPTO</div>
+                <div class="pro">PRO</div>
+            </a>
+            <div class="right">
+                <div class="e-mail">
+                    <div class="text">...</div>
+                    <div class="arrow"><img src="images/arrow-to-down.png" alt="icon"></div>
+
+                    <div class="top_menu">
+                        <a href="/deposit" class="top_item">Пополнить</a>
+                        <a href="/withdraw" class="top_item">Вывести</a>
+                        <a href="/account" class="top_item">Личный кабинет</a>
+                        <div class="top_item" id="exit">Выйти</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="left">
+            <div class="title">Основной счет</div>
+            <div class="name">
+                <div class="string"></div>
+            </div>
+            <div class="balance">
+                <div class="numder"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title"><p>Вывести средства</p></div>
+            <div class="details">
+                <div class="text">Выберите метод транзакции</div>
+                <div class="method">
+                    <div class="image method_item" id="paypal"><img src="images/pay-pall.png"></div>
+                    <div class="image method_item" id="qiwi"><img src="images/qivi.png"></div>
+                    <div class="image method_item selected" id="bank_card"><img src="images/visa.png"></div>
+                </div>
+                <!-- <div class="requisites"><p>4276 8380 1998 3425</p></div> -->
+                <div class="text">Введите сумму для вывода<br>(100 - 100000 RUB)</div>
+                <div class="sum"><input type="number" placeholder="5000" id="amount"></div>
+
+                <div class="text">Ваши реквизиты</div>
+                <div class="sum"><input type="text" placeholder="Номер счета" id="address"></div>
+
+                <div class="button" id="send">Продолжить</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="common.js"></script>
+<script src="withdraw.js"></script>
+</html>
